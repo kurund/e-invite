@@ -9,6 +9,7 @@
   .title {
     font-size: 24px;
     padding: 15px;
+    background-color: #000000;
   }
   .main-content {
     color: #ffffff;
@@ -17,6 +18,8 @@
   .main-prog {
     text-align: left;
     margin-left: 458px;
+    background-color: #000000;
+    width: 500px;
   }
   .ins-button {
     padding-top: 31px;
@@ -36,8 +39,8 @@
 <body class="main-bg">
 <div class="main-content">
   <div class="title">Welcome to the matrix</div>
+     <br/>
   <div class="main-prog">
-
   <div class="prog">
     function get_marry() {
       </div>
@@ -208,13 +211,17 @@
     get_marry();
       </div>
   <div class="prog">
-
+  <br/>
   </div>
   </div>
   <div class="ins-button">
-    <button class="button button1">press any key OR click here to begin decryption process...</button>
-    <button class="button button2">click here to view the result</button>
+    <button class="button button1">press any key or click here to begin decryption process...</button>
+    <button onclick='location.href="invite.htm"' class="button button2">click here to view the result</button>
   </div>
+  <div>
+    <br/><br/><br/>
+  </div>
+
 </div>
 <script type="text/javascript">
   // bind click event for button
@@ -227,7 +234,8 @@
     var finished = true;
     $('div.prog').each(function(i){
       if (!$(this).hasClass('shown')) {
-        $(this).addClass('shown').show();
+        $(this).addClass('shown').fadeIn(800);
+        $(this).focus();
         finished = false;
         return false;
       }
