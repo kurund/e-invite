@@ -238,6 +238,10 @@
     $('div.prog').each(function(i){
       if (!$(this).hasClass('shown')) {
         $(this).addClass('shown').fadeIn(800);
+        //FIX ME: this code needs cleanup
+        $(this).next().addClass('shown').fadeIn(800);
+        $(this).next().next().addClass('shown').fadeIn(800);
+        $(this).next().next().next().addClass('shown').fadeIn(800);
         $(this).focus();
         finished = false;
         return false;
